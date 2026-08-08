@@ -25,17 +25,6 @@ export class Git {
     return this.gitPath = path;
   }
 
-  parseOutput<T>(
-    output: string,
-    build: (head: string, rest: string) => T | null,
-  ): T | null {
-    const nul = output.indexOf("\0");
-    if (nul < 0)
-      return null;
-
-    return build(output.slice(0, nul), output.slice(nul + 1));
-  }
-
   async doCommand(command: string, ...extra: string[]): Promise<CommandResult> {
     const args = ["-C", this.gitPath, ...command.split(" ").filter(Boolean), ...extra];
 

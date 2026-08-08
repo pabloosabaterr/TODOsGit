@@ -14,7 +14,14 @@ export class Grep {
     private readonly git: Git,
   ) {}
 
-  buildGrepHit(file: string, rest: string): GrepHit | null {
+  private parseOutput(output: string): GrepHit | null {
+    const nul = output.indexOf("\0");
+    if (nul < 0)
+      return null;
+
+    const file = output.slice(0, nul);
+    const rest = output.slice(nul + 1);
+
     const sep = rest.search(/[\0:]/);
     if (sep < 0) return null;
 
@@ -32,7 +39,7 @@ export class Grep {
     const hits = new Map<string, Map<number, string>>();
 
     for (const record of stdout.split("\n")) {
-      const hit = this.git.parseOutput(record, this.buildGrepHit)
+      const hit = this.parseOutput(record);
       if (!hit)
         continue;
 

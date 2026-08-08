@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "exactOptionalPropertyTypes": true,
+    "verbatimModuleSyntax": true
+  },
+ "fmt": {
+    "semiColons": true,
+    "lineWidth": 100,
+    "indentWidth": 2
+  },
+  "lint": {
+    "rules": {
+      "tags": ["recommended"],
+      "include": [
+        "no-explicit-any",
+        "explicit-function-return-type",
+        "explicit-module-boundary-types"
+      ]
+    }
+  }
+  "tasks": {
+    "dev": "deno run --allow-read src/main.ts"
+  },
+}

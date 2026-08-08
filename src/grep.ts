@@ -1,6 +1,6 @@
 import type { Git } from "./git.ts";
 
-const KEYWORDS = ["TODO", "NEEDSWORK", "FIXME", "XXX"];
+export const KEYWORDS = ["TODO", "NEEDSWORK", "FIXME", "XXX"];
 
 export interface GrepHit {
   file: string;
@@ -25,7 +25,10 @@ export class Grep {
   }
 
   async find(): Promise<Map<string, Map<number, string>>> {
-    const stdout = await this.git.doCommand("grep -z -nIw -E", `"${KEYWORDS.join("|")}"`);
+    const {code, stdout, stderr} = await this.git.doCommand("grep -z -nIw -E", KEYWORDS.join("|"));
+    if (code > 1)
+      throw new Error(`git grep failed (${code}): ${stderr.trim()}`);
+
     const hits = new Map<string, Map<number, string>>();
 
     for (const record of stdout.split("\n")) {

@@ -1,19 +1,19 @@
-# NEEDSWORK / TODO / FIXME / XXX markers in git
+# TODO / NEEDSWORK / FIXME / XXX markers in git
 
-411 lines in total, at HEAD `90ee14eb` (v2.55.0-399-g90ee14eb04). Collected on 2026-08-01.
+409 lines in total, at HEAD `93eec172` (v2.55.0-504-g93eec17209). Collected on 2026-08-08.
 
 Dates come from `git blame -w` and refer to the last time the line was touched, which is not necessarily when the marker was added.
 
 Links point at the tip of `master` on GitHub, so line numbers may drift as that branch moves ahead of the commit scanned here.
 
-This file is generated. Run `make` to rebuild it; do not edit it by hand.
+This file is generated. Run `deno task report` to rebuild it; do not edit it by hand.
 
 ## Count by marker
 
 | Marker | Count |
 | --- | --- |
-| NEEDSWORK | 120 |
-| TODO | 211 |
+| TODO | 207 |
+| NEEDSWORK | 122 |
 | FIXME | 40 |
 | XXX | 41 |
 
@@ -22,14 +22,14 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 | Directory | Count |
 | --- | --- |
 | (root) | 156 |
-| Documentation | 16 |
-| builtin | 56 |
+| builtin | 55 |
 | compat | 8 |
 | contrib | 11 |
+| Documentation | 16 |
 | git-gui | 7 |
 | gitk-git | 4 |
 | gitweb | 3 |
-| odb | 2 |
+| odb | 1 |
 | perl | 9 |
 | po | 22 |
 | refs | 5 |
@@ -58,10 +58,10 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 | 2018 | 20 |
 | 2019 | 20 |
 | 2020 | 14 |
-| 2021 | 46 |
+| 2021 | 45 |
 | 2022 | 49 |
 | 2023 | 17 |
-| 2024 | 21 |
+| 2024 | 20 |
 | 2025 | 19 |
 | 2026 | 33 |
 
@@ -81,13 +81,13 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `apply.c` (3)
 
-- 2016-04-22 `13b5af22` [L852](https://github.com/git/git/blob/master/apply.c#L852) `* FIXME! The end-of-filename heuristics are kind of screwy. For existi`
-- 2016-04-22 `13b5af22` [L3394](https://github.com/git/git/blob/master/apply.c#L3394) `/* XXX read_sha1_file NUL-terminates */`
-- 2016-04-22 `13b5af22` [L3597](https://github.com/git/git/blob/master/apply.c#L3597) `* NEEDSWORK: shouldn't this be flagged`
+- 2016-04-22 `13b5af22` [L864](https://github.com/git/git/blob/master/apply.c#L864) `* FIXME! The end-of-filename heuristics are kind of screwy. For existi`
+- 2016-04-22 `13b5af22` [L3406](https://github.com/git/git/blob/master/apply.c#L3406) `/* XXX read_sha1_file NUL-terminates */`
+- 2016-04-22 `13b5af22` [L3609](https://github.com/git/git/blob/master/apply.c#L3609) `* NEEDSWORK: shouldn't this be flagged`
 
 `branch.c` (1)
 
-- 2022-01-29 `961b130d` [L803](https://github.com/git/git/blob/master/branch.c#L803) `* NEEDSWORK If tracking was set up in the superproject but not the`
+- 2022-01-28 `961b130d` [L803](https://github.com/git/git/blob/master/branch.c#L803) `* NEEDSWORK If tracking was set up in the superproject but not the`
 
 `bundle-uri.c` (1)
 
@@ -115,9 +115,9 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `diff.c` (8)
 
-- 2017-06-30 `e6e045f8` [L869](https://github.com/git/git/blob/master/diff.c#L869) `* NEEDSWORK: Instead of storing a copy of the line, add an offset poin`
-- 2017-08-16 `f0b8fb6e` [L1188](https://github.com/git/git/blob/master/diff.c#L1188) `* NEEDSWORK: This uses the same heuristic as blame_entry_score() in bl`
-- 2017-06-30 `e6e045f8` [L2295](https://github.com/git/git/blob/master/diff.c#L2295) `* NEEDSWORK:`
+- 2017-06-29 `e6e045f8` [L869](https://github.com/git/git/blob/master/diff.c#L869) `* NEEDSWORK: Instead of storing a copy of the line, add an offset poin`
+- 2017-08-15 `f0b8fb6e` [L1188](https://github.com/git/git/blob/master/diff.c#L1188) `* NEEDSWORK: This uses the same heuristic as blame_entry_score() in bl`
+- 2017-06-29 `e6e045f8` [L2295](https://github.com/git/git/blob/master/diff.c#L2295) `* NEEDSWORK:`
 - 2012-04-30 `dc801e71` [L2995](https://github.com/git/git/blob/master/diff.c#L2995) `/* "Bin XXX -> YYY bytes" */`
 - 2012-04-30 `dc801e71` [L3031](https://github.com/git/git/blob/master/diff.c#L3031) `* Binary files are displayed with "Bin XXX -> YYY bytes"`
 - 2012-04-30 `dc801e71` [L3060](https://github.com/git/git/blob/master/diff.c#L3060) `* strlen("Bin XXX -> YYY bytes") == bin_width, and the part`
@@ -136,11 +136,12 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `entry.c` (1)
 
-- 2021-04-01 `3450a304` [L453](https://github.com/git/git/blob/master/entry.c#L453) `/* TODO: audit for interaction with sparse-index. */`
+- 2021-04-01 `3450a304` [L454](https://github.com/git/git/blob/master/entry.c#L454) `/* TODO: audit for interaction with sparse-index. */`
 
-`environment.h` (1)
+`environment.h` (2)
 
-- 2024-09-12 `673af418` [L159](https://github.com/git/git/blob/master/environment.h#L159) `* TODO: All the below state either explicitly or implicitly relies on`
+- 2026-07-14 `1a6c84e9` [L92](https://github.com/git/git/blob/master/environment.h#L92) `* NEEDSWORK: It would be better if these definitions could be moved to`
+- 2024-09-12 `673af418` [L212](https://github.com/git/git/blob/master/environment.h#L212) `* TODO: All the below state either explicitly or implicitly relies on`
 
 `fsmonitor.c` (2)
 
@@ -150,9 +151,9 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 `git-archimport.perl` (4)
 
 - 2005-09-11 `241b5967` [L23](https://github.com/git/git/blob/master/git-archimport.perl#L23) `=head1 TODO`
-- 2005-11-24 `42f44b08` [L229](https://github.com/git/git/blob/master/git-archimport.perl#L229) `# FIXME see if we can find a more optimal way to do this by graphing`
+- 2005-11-23 `42f44b08` [L229](https://github.com/git/git/blob/master/git-archimport.perl#L229) `# FIXME see if we can find a more optimal way to do this by graphing`
 - 2005-08-30 `d3968363` [L237](https://github.com/git/git/blob/master/git-archimport.perl#L237) `## TODO cleanup irrelevant patches`
-- 2005-11-24 `6df896b5` [L474](https://github.com/git/git/blob/master/git-archimport.perl#L474) `# TODO: handle removed_directories and renamed_directories:`
+- 2005-11-23 `6df896b5` [L474](https://github.com/git/git/blob/master/git-archimport.perl#L474) `# TODO: handle removed_directories and renamed_directories:`
 
 `git-cvsexportcommit.perl` (1)
 
@@ -166,31 +167,31 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 - 2006-02-22 `3fda8c4c` [L424](https://github.com/git/git/blob/master/git-cvsserver.perl#L424) `# TODO : re-enable this, currently it's not particularly useful`
 - 2006-02-22 `3fda8c4c` [L663](https://github.com/git/git/blob/master/git-cvsserver.perl#L663) `# TODO : check we're not squashing an already existing file`
-- 2008-05-15 `8a06a632` [L694](https://github.com/git/git/blob/master/git-cvsserver.perl#L694) `#TODO: Also have option to send warning to user?`
+- 2008-05-14 `8a06a632` [L694](https://github.com/git/git/blob/master/git-cvsserver.perl#L694) `#TODO: Also have option to send warning to user?`
 - 2006-02-22 `3fda8c4c` [L767](https://github.com/git/git/blob/master/git-cvsserver.perl#L767) `# TODO : not sure if the format of this message is quite correct.`
-- 2012-10-14 `61717661` [L1118](https://github.com/git/git/blob/master/git-cvsserver.perl#L1118) `# || ( defined($state->{opt}{D}) && $state->{opt}{D} ne "" ) # TODO`
-- 2012-10-14 `61717661` [L1122](https://github.com/git/git/blob/master/git-cvsserver.perl#L1122) `# TODO: Convert -D value into the form 2011.04.10.04.46.57,`
-- 2012-10-14 `d8574ff2` [L1312](https://github.com/git/git/blob/master/git-cvsserver.perl#L1312) `# TODO: If it has been modified in the sandbox, error out`
+- 2012-10-13 `61717661` [L1118](https://github.com/git/git/blob/master/git-cvsserver.perl#L1118) `# || ( defined($state->{opt}{D}) && $state->{opt}{D} ne "" ) # TODO`
+- 2012-10-13 `61717661` [L1122](https://github.com/git/git/blob/master/git-cvsserver.perl#L1122) `# TODO: Convert -D value into the form 2011.04.10.04.46.57,`
+- 2012-10-13 `d8574ff2` [L1312](https://github.com/git/git/blob/master/git-cvsserver.perl#L1312) `# TODO: If it has been modified in the sandbox, error out`
 - 2006-02-22 `3fda8c4c` [L1469](https://github.com/git/git/blob/master/git-cvsserver.perl#L1469) `# TODO : we should copy files in blocks`
-- 2012-10-14 `61717661` [L1497](https://github.com/git/git/blob/master/git-cvsserver.perl#L1497) `# TODO?: OR sticky dir is different...`
-- 2012-10-14 `61717661` [L1511](https://github.com/git/git/blob/master/git-cvsserver.perl#L1511) `# TODO?: Consider sending a final duplicate Sticky response`
-- 2012-10-14 `61717661` [L1610](https://github.com/git/git/blob/master/git-cvsserver.perl#L1610) `#TODO: We could split the cvs commit into multiple`
+- 2012-10-13 `61717661` [L1497](https://github.com/git/git/blob/master/git-cvsserver.perl#L1497) `# TODO?: OR sticky dir is different...`
+- 2012-10-13 `61717661` [L1511](https://github.com/git/git/blob/master/git-cvsserver.perl#L1511) `# TODO?: Consider sending a final duplicate Sticky response`
+- 2012-10-13 `61717661` [L1610](https://github.com/git/git/blob/master/git-cvsserver.perl#L1610) `#TODO: We could split the cvs commit into multiple`
 - 2006-02-22 `3fda8c4c` [L1847](https://github.com/git/git/blob/master/git-cvsserver.perl#L1847) `# TODO : All possible statuses aren't yet implemented`
-- 2012-10-14 `61717661` [L2152](https://github.com/git/git/blob/master/git-cvsserver.perl#L2152) `# TODO: Use --label instead of -L because -L is no longer`
-- 2012-10-14 `61717661` [L2159](https://github.com/git/git/blob/master/git-cvsserver.perl#L2159) `# TODO: Real CVS seems to include a date in the label, before`
+- 2012-10-13 `61717661` [L2152](https://github.com/git/git/blob/master/git-cvsserver.perl#L2152) `# TODO: Use --label instead of -L because -L is no longer`
+- 2012-10-13 `61717661` [L2159](https://github.com/git/git/blob/master/git-cvsserver.perl#L2159) `# TODO: Real CVS seems to include a date in the label, before`
 - 2006-02-22 `3fda8c4c` [L2329](https://github.com/git/git/blob/master/git-cvsserver.perl#L2329) `# TODO: if we got a revision from the client, use that instead`
-- 2012-10-14 `eb5dcb2c` [L2760](https://github.com/git/git/blob/master/git-cvsserver.perl#L2760) `# || ( defined($stickyDate) && $stickyDate ne "" )   # TODO`
-- 2012-10-14 `eb5dcb2c` [L2764](https://github.com/git/git/blob/master/git-cvsserver.perl#L2764) `# TODO: Convert -D value into the form 2011.04.10.04.46.57,`
-- 2012-10-14 `eb5dcb2c` [L2808](https://github.com/git/git/blob/master/git-cvsserver.perl#L2808) `# TODO: When/if we actually pick versions by {date} properly,`
+- 2012-10-13 `eb5dcb2c` [L2760](https://github.com/git/git/blob/master/git-cvsserver.perl#L2760) `# || ( defined($stickyDate) && $stickyDate ne "" )   # TODO`
+- 2012-10-13 `eb5dcb2c` [L2764](https://github.com/git/git/blob/master/git-cvsserver.perl#L2764) `# TODO: Convert -D value into the form 2011.04.10.04.46.57,`
+- 2012-10-13 `eb5dcb2c` [L2808](https://github.com/git/git/blob/master/git-cvsserver.perl#L2808) `# TODO: When/if we actually pick versions by {date} properly,`
 - 2006-02-22 `3fda8c4c` [L3861](https://github.com/git/git/blob/master/git-cvsserver.perl#L3861) `# TODO: log processing is memory bound`
-- 2012-10-14 `ab07681f` [L4513](https://github.com/git/git/blob/master/git-cvsserver.perl#L4513) `# TODO: date, state, or by specific logins filters?`
-- 2012-10-14 `ab07681f` [L4514](https://github.com/git/git/blob/master/git-cvsserver.perl#L4514) `# TODO: Handle comma-separated list of revFilter items, each item`
-- 2012-10-14 `ab07681f` [L4517](https://github.com/git/git/blob/master/git-cvsserver.perl#L4517) `# TODO: Adjust $db_query WHERE clause based on revFilter, instead of`
-- 2012-10-14 `bfdafa09` [L4561](https://github.com/git/git/blob/master/git-cvsserver.perl#L4561) `actual revision (one of the below).  TODO: Also allow it to`
-- 2012-10-14 `bfdafa09` [L4635](https://github.com/git/git/blob/master/git-cvsserver.perl#L4635) `#   - FUTURE: TODO: Rework database somehow to make up and remember`
-- 2012-10-14 `658b57ad` [L4738](https://github.com/git/git/blob/master/git-cvsserver.perl#L4738) `# TODO: Possible optimization strategies:`
-- 2012-10-14 `658b57ad` [L4765](https://github.com/git/git/blob/master/git-cvsserver.perl#L4765) `# TODO: Include file hash in dirmap cache.`
-- 2012-10-14 `51a7e6db` [L5015](https://github.com/git/git/blob/master/git-cvsserver.perl#L5015) `# TODO: Perhaps use git check-ref-format, with an in-process cache of`
+- 2012-10-13 `ab07681f` [L4513](https://github.com/git/git/blob/master/git-cvsserver.perl#L4513) `# TODO: date, state, or by specific logins filters?`
+- 2012-10-13 `ab07681f` [L4514](https://github.com/git/git/blob/master/git-cvsserver.perl#L4514) `# TODO: Handle comma-separated list of revFilter items, each item`
+- 2012-10-13 `ab07681f` [L4517](https://github.com/git/git/blob/master/git-cvsserver.perl#L4517) `# TODO: Adjust $db_query WHERE clause based on revFilter, instead of`
+- 2012-10-13 `bfdafa09` [L4561](https://github.com/git/git/blob/master/git-cvsserver.perl#L4561) `actual revision (one of the below).  TODO: Also allow it to`
+- 2012-10-13 `bfdafa09` [L4635](https://github.com/git/git/blob/master/git-cvsserver.perl#L4635) `#   - FUTURE: TODO: Rework database somehow to make up and remember`
+- 2012-10-13 `658b57ad` [L4738](https://github.com/git/git/blob/master/git-cvsserver.perl#L4738) `# TODO: Possible optimization strategies:`
+- 2012-10-13 `658b57ad` [L4765](https://github.com/git/git/blob/master/git-cvsserver.perl#L4765) `# TODO: Include file hash in dirmap cache.`
+- 2012-10-13 `51a7e6db` [L5015](https://github.com/git/git/blob/master/git-cvsserver.perl#L5015) `# TODO: Perhaps use git check-ref-format, with an in-process cache of`
 
 `git-filter-branch.sh` (2)
 
@@ -208,11 +209,11 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 - 2014-12-07 `83c9433e` [L1417](https://github.com/git/git/blob/master/git-svn.perl#L1417) `# TODO: handle combining properties better`
 - 2014-12-07 `83c9433e` [L1437](https://github.com/git/git/blob/master/git-svn.perl#L1437) `# TODO: don't simply append here if $file already has svn-properties`
-- 2007-01-14 `44320b9e` [L1870](https://github.com/git/git/blob/master/git-svn.perl#L1870) `# TODO: set *:merge properties or like...`
+- 2007-01-13 `44320b9e` [L1870](https://github.com/git/git/blob/master/git-svn.perl#L1870) `# TODO: set *:merge properties or like...`
 
 `git.c` (1)
 
-- 2016-01-27 `441981bc` [L860](https://github.com/git/git/blob/master/git.c#L860) `* NEEDSWORK: if we can figure out cases`
+- 2016-01-26 `441981bc` [L860](https://github.com/git/git/blob/master/git.c#L860) `* NEEDSWORK: if we can figure out cases`
 
 `graph.c` (1)
 
@@ -220,8 +221,8 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `grep.c` (2)
 
-- 2020-01-16 `1d1729ca` [L1535](https://github.com/git/git/blob/master/grep.c#L1535) `* TODO: allowing text conversion to run in parallel with object`
-- 2006-09-18 `83b5d2f5` [L1786](https://github.com/git/git/blob/master/grep.c#L1786) `/* NEEDSWORK:`
+- 2020-01-15 `1d1729ca` [L1535](https://github.com/git/git/blob/master/grep.c#L1535) `* TODO: allowing text conversion to run in parallel with object`
+- 2006-09-17 `83b5d2f5` [L1786](https://github.com/git/git/blob/master/grep.c#L1786) `/* NEEDSWORK:`
 
 `grep.h` (1)
 
@@ -260,11 +261,11 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `list-objects.c` (1)
 
-- 2017-11-16 `ce5b6f9b` [L416](https://github.com/git/git/blob/master/list-objects.c#L416) `* NEEDSWORK: Adding the tree and then flushing it here`
+- 2017-11-15 `ce5b6f9b` [L416](https://github.com/git/git/blob/master/list-objects.c#L416) `* NEEDSWORK: Adding the tree and then flushing it here`
 
 `match-trees.c` (1)
 
-- 2008-07-01 `85e51b78` [L273](https://github.com/git/git/blob/master/match-trees.c#L273) `* NEEDSWORK: this limits the recursion depth to hardcoded`
+- 2008-06-30 `85e51b78` [L273](https://github.com/git/git/blob/master/match-trees.c#L273) `* NEEDSWORK: this limits the recursion depth to hardcoded`
 
 `merge-ort.c` (6)
 
@@ -289,11 +290,7 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `object-file.c` (1)
 
-- 2026-07-10 `48d730a1` [L1726](https://github.com/git/git/blob/master/object-file.c#L1726) `* NEEDSWORK: This transaction flag is only used by the "files"`
-
-`object-file.h` (1)
-
-- 2026-06-01 `e6a39bbe` [L32](https://github.com/git/git/blob/master/object-file.h#L32) `* TODO: We should stop exposing this function altogether and move it i`
+- 2026-07-10 `48d730a1` [L1326](https://github.com/git/git/blob/master/object-file.c#L1326) `* NEEDSWORK: This transaction flag is only used by the "files"`
 
 `object.h` (1)
 
@@ -305,8 +302,8 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `oidmap.h` (2)
 
-- 2019-10-07 `87571c3f` [L101](https://github.com/git/git/blob/master/oidmap.h#L101) `/* TODO: this API could be reworked to do compile-time type checks */`
-- 2019-10-07 `87571c3f` [L109](https://github.com/git/git/blob/master/oidmap.h#L109) `/* TODO: this API could be reworked to do compile-time type checks */`
+- 2019-10-06 `87571c3f` [L101](https://github.com/git/git/blob/master/oidmap.h#L101) `/* TODO: this API could be reworked to do compile-time type checks */`
+- 2019-10-06 `87571c3f` [L109](https://github.com/git/git/blob/master/oidmap.h#L109) `/* TODO: this API could be reworked to do compile-time type checks */`
 
 `pack-bitmap.c` (1)
 
@@ -330,21 +327,20 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `read-cache.c` (4)
 
-- 2022-09-28 `4a6ed30f` [L1845](https://github.com/git/git/blob/master/read-cache.c#L1845) `* NEEDSWORK: using 'offsetof()' is cumbersome and should be replaced`
-- 2018-10-10 `77ff1127` [L2261](https://github.com/git/git/blob/master/read-cache.c#L2261) `/* TODO: does creating more threads than cores help? */`
-- 2021-04-01 `0c18c059` [L2533](https://github.com/git/git/blob/master/read-cache.c#L2533) `/* TODO: audit for interaction with sparse-index. */`
-- 2023-05-16 `1a40e7be` [L3817](https://github.com/git/git/blob/master/read-cache.c#L3817) `/* TODO: audit for interaction with sparse-index. */`
+- 2022-09-28 `4a6ed30f` [L1844](https://github.com/git/git/blob/master/read-cache.c#L1844) `* NEEDSWORK: using 'offsetof()' is cumbersome and should be replaced`
+- 2018-10-10 `77ff1127` [L2260](https://github.com/git/git/blob/master/read-cache.c#L2260) `/* TODO: does creating more threads than cores help? */`
+- 2021-04-01 `0c18c059` [L2532](https://github.com/git/git/blob/master/read-cache.c#L2532) `/* TODO: audit for interaction with sparse-index. */`
+- 2023-05-16 `1a40e7be` [L3816](https://github.com/git/git/blob/master/read-cache.c#L3816) `/* TODO: audit for interaction with sparse-index. */`
 
 `ref-filter.c` (2)
 
 - 2024-09-19 `20652956` [L2441](https://github.com/git/git/blob/master/ref-filter.c#L2441) `* NEEDSWORK: The following code might be unnecessary if all codepaths`
 - 2015-07-07 `68411046` [L2835](https://github.com/git/git/blob/master/ref-filter.c#L2835) `* NEEDSWORK:`
 
-`refs.c` (3)
+`refs.c` (2)
 
-- 2022-08-05 `b877e617` [L601](https://github.com/git/git/blob/master/refs.c#L601) `* NEEDSWORK: Special case other symrefs such as REBASE_HEAD,`
-- 2026-02-25 `01dc8459` [L2346](https://github.com/git/git/blob/master/refs.c#L2346) `* TODO Send in a 'struct worktree' instead of a 'gitdir', and`
-- 2024-06-06 `6d6a3a99` [L3377](https://github.com/git/git/blob/master/refs.c#L3377) `* TODO: we should really be passing the caller-provided repository to`
+- 2022-08-05 `b877e617` [L599](https://github.com/git/git/blob/master/refs.c#L599) `* NEEDSWORK: Special case other symrefs such as REBASE_HEAD,`
+- 2026-02-25 `01dc8459` [L2345](https://github.com/git/git/blob/master/refs.c#L2345) `* TODO Send in a 'struct worktree' instead of a 'gitdir', and`
 
 `remote-curl.c` (1)
 
@@ -352,12 +348,12 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `remote.h` (2)
 
-- 2022-05-16 `1d04e719` [L463](https://github.com/git/git/blob/master/remote.h#L463) `* NEEDSWORK: This works incorrectly on the domain and protocol part.`
-- 2022-05-16 `1d04e719` [L473](https://github.com/git/git/blob/master/remote.h#L473) `* NEEDSWORK: Given how chop_last_dir() works, this function is broken`
+- 2022-05-16 `1d04e719` [L465](https://github.com/git/git/blob/master/remote.h#L465) `* NEEDSWORK: This works incorrectly on the domain and protocol part.`
+- 2022-05-16 `1d04e719` [L475](https://github.com/git/git/blob/master/remote.h#L475) `* NEEDSWORK: Given how chop_last_dir() works, this function is broken`
 
 `repack-promisor.c` (2)
 
-- 2025-10-16 `29e93551` [L60](https://github.com/git/git/blob/master/repack-promisor.c#L60) `* NEEDSWORK: fetch-pack sometimes generates non-empty`
+- 2025-10-15 `29e93551` [L60](https://github.com/git/git/blob/master/repack-promisor.c#L60) `* NEEDSWORK: fetch-pack sometimes generates non-empty`
 - 2026-01-05 `dd8c4e12` [L93](https://github.com/git/git/blob/master/repack-promisor.c#L93) `* NEEDSWORK: Giving pack-objects only the OIDs without any ordering`
 
 `replay.c` (1)
@@ -366,10 +362,10 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `rerere.c` (4)
 
-- 2015-07-01 `4b68c2a0` [L553](https://github.com/git/git/blob/master/rerere.c#L553) `* NEEDSWORK: we do not record or replay a previous "resolve by`
-- 2015-07-01 `4b68c2a0` [L589](https://github.com/git/git/blob/master/rerere.c#L589) `* NEEDSWORK: we may want to fix the caller that implements "rerere`
+- 2015-06-30 `4b68c2a0` [L553](https://github.com/git/git/blob/master/rerere.c#L553) `* NEEDSWORK: we do not record or replay a previous "resolve by`
+- 2015-06-30 `4b68c2a0` [L589](https://github.com/git/git/blob/master/rerere.c#L589) `* NEEDSWORK: we may want to fix the caller that implements "rerere`
 - 2016-03-14 `3d730ed9` [L1013](https://github.com/git/git/blob/master/rerere.c#L1013) `* NEEDSWORK: handle conflicts from merges with`
-- 2015-07-01 `e828de82` [L1290](https://github.com/git/git/blob/master/rerere.c#L1290) `* NEEDSWORK: shouldn't we be calling this from "reset --hard"?`
+- 2015-06-30 `e828de82` [L1290](https://github.com/git/git/blob/master/rerere.c#L1290) `* NEEDSWORK: shouldn't we be calling this from "reset --hard"?`
 
 `reset.c` (1)
 
@@ -381,23 +377,24 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `revision.c` (2)
 
-- 2010-04-20 `ebdc94f3` [L1382](https://github.com/git/git/blob/master/revision.c#L1382) `* NEEDSWORK: decide if we want to remove parents that are`
-- 2021-04-01 `f5fed74f` [L1804](https://github.com/git/git/blob/master/revision.c#L1804) `/* TODO: audit for interaction with sparse-index. */`
+- 2010-04-20 `ebdc94f3` [L1388](https://github.com/git/git/blob/master/revision.c#L1388) `* NEEDSWORK: decide if we want to remove parents that are`
+- 2021-04-01 `f5fed74f` [L1810](https://github.com/git/git/blob/master/revision.c#L1810) `/* TODO: audit for interaction with sparse-index. */`
 
 `run-command.c` (1)
 
-- 2015-12-16 `c553c72e` [L1861](https://github.com/git/git/blob/master/run-command.c#L1861) `* NEEDSWORK:`
+- 2015-12-15 `c553c72e` [L1861](https://github.com/git/git/blob/master/run-command.c#L1861) `* NEEDSWORK:`
 
 `send-pack.c` (2)
 
 - 2014-09-12 `a85b377d` [L342](https://github.com/git/git/blob/master/send-pack.c#L342) `* NEEDSWORK: perhaps move this to git-compat-util.h or somewhere and`
-- 2014-08-13 `621b0599` [L637](https://github.com/git/git/blob/master/send-pack.c#L637) `* NEEDSWORK: why does delete-refs have to be so specific to`
+- 2014-08-12 `621b0599` [L637](https://github.com/git/git/blob/master/send-pack.c#L637) `* NEEDSWORK: why does delete-refs have to be so specific to`
 
-`sequencer.c` (3)
+`sequencer.c` (4)
 
-- 2020-11-03 `14c4586c` [L785](https://github.com/git/git/blob/master/sequencer.c#L785) `* TODO: merge_switch_to_result will update index/working tree;`
-- 2021-09-27 `1b5f3733` [L4076](https://github.com/git/git/blob/master/sequencer.c#L4076) `unpack_tree_opts.preserve_ignored = 0; /* FIXME: !overwrite_ignore */`
-- 2020-11-03 `14c4586c` [L4369](https://github.com/git/git/blob/master/sequencer.c#L4369) `* TODO: Should use merge_incore_recursive() and`
+- 2020-11-02 `14c4586c` [L785](https://github.com/git/git/blob/master/sequencer.c#L785) `* TODO: merge_switch_to_result will update index/working tree;`
+- 2021-09-27 `1b5f3733` [L4106](https://github.com/git/git/blob/master/sequencer.c#L4106) `unpack_tree_opts.preserve_ignored = 0; /* FIXME: !overwrite_ignore */`
+- 2020-11-02 `14c4586c` [L4399](https://github.com/git/git/blob/master/sequencer.c#L4399) `* TODO: Should use merge_incore_recursive() and`
+- 2026-07-15 `42554b78` [L5023](https://github.com/git/git/blob/master/sequencer.c#L5023) `* NEEDSWORK: Do not record the commit as rewritten when`
 
 `setup.c` (1)
 
@@ -415,12 +412,12 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 `submodule.c` (7)
 
 - 2021-08-06 `a452128a` [L235](https://github.com/git/git/blob/master/submodule.c#L235) `* NEEDSWORK: Emit a warning if submodule.active exists, but is valuele`
-- 2016-09-01 `fd47ae6a` [L684](https://github.com/git/git/blob/master/submodule.c#L684) `/* TODO: other options may need to be passed here. */`
-- 2022-03-08 `b90d9f76` [L795](https://github.com/git/git/blob/master/submodule.c#L795) `* NEEDSWORK: Storing an arbitrary commit is undesirable because we can`
-- 2022-03-08 `b90d9f76` [L1650](https://github.com/git/git/blob/master/submodule.c#L1650) `* NEEDSWORK: Submodules set/unset a value for`
+- 2016-08-31 `fd47ae6a` [L684](https://github.com/git/git/blob/master/submodule.c#L684) `/* TODO: other options may need to be passed here. */`
+- 2022-03-07 `b90d9f76` [L795](https://github.com/git/git/blob/master/submodule.c#L795) `* NEEDSWORK: Storing an arbitrary commit is undesirable because we can`
+- 2022-03-07 `b90d9f76` [L1650](https://github.com/git/git/blob/master/submodule.c#L1650) `* NEEDSWORK: Submodules set/unset a value for`
 - 2019-03-13 `bd5e567d` [L1784](https://github.com/git/git/blob/master/submodule.c#L1784) `* NEEDSWORK: This indicates that the overall fetch`
 - 2021-09-27 `94b7f156` [L2110](https://github.com/git/git/blob/master/submodule.c#L2110) `/* TODO: determine if this might overwright untracked files */`
-- 2017-03-09 `bf0231c6` [L2626](https://github.com/git/git/blob/master/submodule.c#L2626) `* FIXME:`
+- 2017-03-08 `bf0231c6` [L2626](https://github.com/git/git/blob/master/submodule.c#L2626) `* FIXME:`
 
 `tree-walk.c` (1)
 
@@ -445,11 +442,11 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `worktree.c` (1)
 
-- 2023-12-29 `465a22b3` [L179](https://github.com/git/git/blob/master/worktree.c#L179) `* NEEDSWORK: This function exists so that we can look up metadata of a`
+- 2023-12-29 `465a22b3` [L180](https://github.com/git/git/blob/master/worktree.c#L180) `* NEEDSWORK: This function exists so that we can look up metadata of a`
 
 `wt-status.c` (1)
 
-- 2009-12-12 `3c588453` [L235](https://github.com/git/git/blob/master/wt-status.c#L235) `; /* NEEDSWORK: use "git reset --unresolve"??? */`
+- 2009-12-11 `3c588453` [L235](https://github.com/git/git/blob/master/wt-status.c#L235) `; /* NEEDSWORK: use "git reset --unresolve"??? */`
 
 </details>
 
@@ -493,7 +490,7 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 </details>
 
 <details>
-<summary><b>builtin</b> &mdash; 56 markers</summary>
+<summary><b>builtin</b> &mdash; 55 markers</summary>
 
 `builtin/am.c` (1)
 
@@ -523,21 +520,21 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `builtin/fast-export.c` (1)
 
-- 2018-11-16 `fdf31b63` [L762](https://github.com/git/git/blob/master/builtin/fast-export.c#L762) `* FIXME: string_list_remove() below for each ref is overall`
+- 2018-11-15 `fdf31b63` [L762](https://github.com/git/git/blob/master/builtin/fast-export.c#L762) `* FIXME: string_list_remove() below for each ref is overall`
 
 `builtin/fast-import.c` (4)
 
 - 2020-05-30 `d42a2fb7` [L1977](https://github.com/git/git/blob/master/builtin/fast-import.c#L1977) `* NEEDSWORK: perhaps check for reasonable values? For example, we`
 - 2020-05-30 `d42a2fb7` [L1990](https://github.com/git/git/blob/master/builtin/fast-import.c#L1990) `* NEEDSWORK: check for brokenness other than num > 1400, such as`
-- 2026-03-13 `ee66c793` [L2919](https://github.com/git/git/blob/master/builtin/fast-import.c#L2919) `* NEEDSWORK: To properly support interoperability mode`
+- 2026-03-12 `ee66c793` [L2919](https://github.com/git/git/blob/master/builtin/fast-import.c#L2919) `* NEEDSWORK: To properly support interoperability mode`
 - 2019-10-03 `3164e6bd` [L3304](https://github.com/git/git/blob/master/builtin/fast-import.c#L3304) `* NEEDSWORK: replace list of tags with hashmap for faster`
 
 `builtin/fetch.c` (4)
 
-- 2026-06-19 `7d00999b` [L1941](https://github.com/git/git/blob/master/builtin/fetch.c#L1941) `* NEEDSWORK: By the time this function executes, we have already parse`
-- 2025-05-19 `0e358de6` [L2051](https://github.com/git/git/blob/master/builtin/fetch.c#L2051) `* TODO: if reference transactions gain logical conflict resolution, we`
-- 2017-12-08 `aa57b871` [L2842](https://github.com/git/git/blob/master/builtin/fetch.c#L2842) `/* TODO should this also die if we have a previous partial-clone? */`
-- 2022-01-19 `135a12bc` [L2883](https://github.com/git/git/blob/master/builtin/fetch.c#L2883) `* NEEDSWORK: as a future optimization, we can return early`
+- 2026-06-19 `7d00999b` [L1942](https://github.com/git/git/blob/master/builtin/fetch.c#L1942) `* NEEDSWORK: By the time this function executes, we have already parse`
+- 2025-05-19 `0e358de6` [L2052](https://github.com/git/git/blob/master/builtin/fetch.c#L2052) `* TODO: if reference transactions gain logical conflict resolution, we`
+- 2017-12-08 `aa57b871` [L2845](https://github.com/git/git/blob/master/builtin/fetch.c#L2845) `/* TODO should this also die if we have a previous partial-clone? */`
+- 2022-01-18 `135a12bc` [L2886](https://github.com/git/git/blob/master/builtin/fetch.c#L2886) `* NEEDSWORK: as a future optimization, we can return early`
 
 `builtin/fsck.c` (5)
 
@@ -557,8 +554,8 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `builtin/grep.c` (2)
 
-- 2020-01-16 `c441ea4e` [L467](https://github.com/git/git/blob/master/builtin/grep.c#L467) `* NEEDSWORK: repo_read_gitmodules() might call`
-- 2022-09-23 `7cae7627` [L477](https://github.com/git/git/blob/master/builtin/grep.c#L477) `* NEEDSWORK: when reading a submodule, the sparsity settings in the`
+- 2020-01-15 `c441ea4e` [L467](https://github.com/git/git/blob/master/builtin/grep.c#L467) `* NEEDSWORK: repo_read_gitmodules() might call`
+- 2022-09-22 `7cae7627` [L477](https://github.com/git/git/blob/master/builtin/grep.c#L477) `* NEEDSWORK: when reading a submodule, the sparsity settings in the`
 
 `builtin/history.c` (1)
 
@@ -567,7 +564,7 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 `builtin/index-pack.c` (3)
 
 - 2020-09-08 `f08cbf60` [L1170](https://github.com/git/git/blob/master/builtin/index-pack.c#L1170) `* NEEDSWORK: If parent data needs to be reloaded, this`
-- 2011-02-03 `e337a04d` [L1760](https://github.com/git/git/blob/master/builtin/index-pack.c#L1760) `* NEEDSWORK: extract this bit from free_pack_by_name() in`
+- 2011-02-02 `e337a04d` [L1760](https://github.com/git/git/blob/master/builtin/index-pack.c#L1760) `* NEEDSWORK: extract this bit from free_pack_by_name() in`
 - 2025-11-19 `8dc22e87` [L2126](https://github.com/git/git/blob/master/builtin/index-pack.c#L2126) `* TODO: we may eventually set up an in-memory object database,`
 
 `builtin/ls-remote.c` (1)
@@ -581,7 +578,7 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `builtin/merge-tree.c` (1)
 
-- 2006-02-16 `164dcb97` [L317](https://github.com/git/git/blob/master/builtin/merge-tree.c#L317) `*    NOTE NOTE NOTE! FIXME! We really really need to walk the index`
+- 2006-02-15 `164dcb97` [L317](https://github.com/git/git/blob/master/builtin/merge-tree.c#L317) `*    NOTE NOTE NOTE! FIXME! We really really need to walk the index`
 
 `builtin/merge.c` (1)
 
@@ -593,7 +590,7 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `builtin/patch-id.c` (1)
 
-- 2024-05-21 `4a1c9593` [L255](https://github.com/git/git/blob/master/builtin/patch-id.c#L255) `* NEEDSWORK: This hack should be removed in favor of converting`
+- 2024-05-20 `4a1c9593` [L255](https://github.com/git/git/blob/master/builtin/patch-id.c#L255) `* NEEDSWORK: This hack should be removed in favor of converting`
 
 `builtin/pull.c` (1)
 
@@ -618,7 +615,7 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `builtin/rev-list.c` (1)
 
-- 2025-07-22 `f31abb42` [L731](https://github.com/git/git/blob/master/builtin/rev-list.c#L731) `* NEEDSWORK: The next loop is utterly broken.  It tries to`
+- 2025-07-21 `f31abb42` [L731](https://github.com/git/git/blob/master/builtin/rev-list.c#L731) `* NEEDSWORK: The next loop is utterly broken.  It tries to`
 
 `builtin/shortlog.c` (1)
 
@@ -632,20 +629,19 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 - 2026-01-30 `ea39808a` [L46](https://github.com/git/git/blob/master/builtin/show-index.c#L46) `* TODO: If a future implementation of index file version encodes the h`
 
-`builtin/stash.c` (2)
+`builtin/stash.c` (1)
 
 - 2021-09-27 `1b5f3733` [L363](https://github.com/git/git/blob/master/builtin/stash.c#L363) `opts.preserve_ignored = 0; /* FIXME: !overwrite_ignore */`
-- 2021-04-01 `a0291201` [L1705](https://github.com/git/git/blob/master/builtin/stash.c#L1705) `/* TODO: audit for interaction with sparse-index. */`
 
 `builtin/submodule--helper.c` (7)
 
 - 2018-05-10 `fc1b9243` [L360](https://github.com/git/git/blob/master/builtin/submodule--helper.c#L360) `* NEEDSWORK: the command currently has access to the variables $name,`
-- 2017-03-17 `1f8d7115` [L591](https://github.com/git/git/blob/master/builtin/submodule--helper.c#L591) `* NEEDSWORK: In a multi-working-tree world, this needs to be`
-- 2025-11-16 `dd8e8c78` [L2119](https://github.com/git/git/blob/master/builtin/submodule--helper.c#L2119) `* NEEDSWORK: audit and ensure that update_submodule() has right`
-- 2024-03-26 `e8d06089` [L2951](https://github.com/git/git/blob/master/builtin/submodule--helper.c#L2951) `* TODO: allow exempting it via`
-- 2021-08-06 `a452128a` [L3558](https://github.com/git/git/blob/master/builtin/submodule--helper.c#L3558) `* NEEDSWORK: In a multi-working-tree world this needs to be`
-- 2021-08-06 `a452128a` [L3562](https://github.com/git/git/blob/master/builtin/submodule--helper.c#L3562) `* NEEDSWORK: In the longer run, we need to get rid of this`
-- 2021-08-10 `a6226fd7` [L3604](https://github.com/git/git/blob/master/builtin/submodule--helper.c#L3604) `/* TODO: audit for interaction with sparse-index. */`
+- 2017-03-17 `1f8d7115` [L592](https://github.com/git/git/blob/master/builtin/submodule--helper.c#L592) `* NEEDSWORK: In a multi-working-tree world, this needs to be`
+- 2025-11-15 `dd8e8c78` [L2120](https://github.com/git/git/blob/master/builtin/submodule--helper.c#L2120) `* NEEDSWORK: audit and ensure that update_submodule() has right`
+- 2024-03-26 `e8d06089` [L2952](https://github.com/git/git/blob/master/builtin/submodule--helper.c#L2952) `* TODO: allow exempting it via`
+- 2021-08-06 `a452128a` [L3559](https://github.com/git/git/blob/master/builtin/submodule--helper.c#L3559) `* NEEDSWORK: In a multi-working-tree world this needs to be`
+- 2021-08-06 `a452128a` [L3563](https://github.com/git/git/blob/master/builtin/submodule--helper.c#L3563) `* NEEDSWORK: In the longer run, we need to get rid of this`
+- 2021-08-10 `a6226fd7` [L3605](https://github.com/git/git/blob/master/builtin/submodule--helper.c#L3605) `/* TODO: audit for interaction with sparse-index. */`
 
 </details>
 
@@ -750,18 +746,17 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 `gitweb/gitweb.perl` (3)
 
 - 2008-10-10 `1b2d297e` [L846](https://github.com/git/git/blob/master/gitweb/gitweb.perl#L846) `# XXX: Warning: If you touch this, check the search form for updating,`
-- 2009-02-08 `7e1100e9` [L6658](https://github.com/git/git/blob/master/gitweb/gitweb.perl#L6658) `# TODO: Allow a readme in some safe format.`
-- 2006-09-22 `cae1862a` [L7243](https://github.com/git/git/blob/master/gitweb/gitweb.perl#L7243) `# FIXME: Should be available when we have no hash base as well.`
+- 2009-02-07 `7e1100e9` [L6666](https://github.com/git/git/blob/master/gitweb/gitweb.perl#L6666) `# TODO: Allow a readme in some safe format.`
+- 2006-09-22 `cae1862a` [L7251](https://github.com/git/git/blob/master/gitweb/gitweb.perl#L7251) `# FIXME: Should be available when we have no hash base as well.`
 
 </details>
 
 <details>
-<summary><b>odb</b> &mdash; 2 markers</summary>
+<summary><b>odb</b> &mdash; 1 markers</summary>
 
-`odb/source-loose.c` (2)
+`odb/source-loose.c` (1)
 
-- 2026-06-01 `e6a39bbe` [L633](https://github.com/git/git/blob/master/odb/source-loose.c#L633) `* TODO: the implementation should be moved here, see the comment on`
-- 2026-06-01 `87af3bb4` [L644](https://github.com/git/git/blob/master/odb/source-loose.c#L644) `/* TODO: this is a known omission that we'll want to address eventuall`
+- 2026-06-01 `87af3bb4` [L972](https://github.com/git/git/blob/master/odb/source-loose.c#L972) `/* TODO: this is a known omission that we'll want to address eventuall`
 
 </details>
 
@@ -777,7 +772,7 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `perl/Git/SVN.pm` (2)
 
-- 2012-07-27 `29499c0b` [L762](https://github.com/git/git/blob/master/perl/Git/SVN.pm#L762) `# FIXME: Fragile, if SVN adds new public properties,`
+- 2012-07-26 `29499c0b` [L762](https://github.com/git/git/blob/master/perl/Git/SVN.pm#L762) `# FIXME: Fragile, if SVN adds new public properties,`
 - 2021-10-29 `412e4cae` [L2272](https://github.com/git/git/blob/master/perl/Git/SVN.pm#L2272) `# TODO: move this to Git.pm?`
 
 `perl/Git/SVN/Editor.pm` (2)
@@ -787,7 +782,7 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `perl/Git/SVN/Log.pm` (1)
 
-- 2012-07-27 `b74fda1c` [L32](https://github.com/git/git/blob/master/perl/Git/SVN/Log.pm#L32) `# TODO: make $c->{l} not have a trailing newline in the future`
+- 2012-07-26 `b74fda1c` [L32](https://github.com/git/git/blob/master/perl/Git/SVN/Log.pm#L32) `# TODO: make $c->{l} not have a trailing newline in the future`
 
 </details>
 
@@ -824,7 +819,7 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `po/ko.po` (4)
 
-- 2016-11-03 `de7011c1` [L3628](https://github.com/git/git/blob/master/po/ko.po#L3628) `# FIXME: "parent %d" 번호가 무슨 의미?`
+- 2016-11-04 `de7011c1` [L3628](https://github.com/git/git/blob/master/po/ko.po#L3628) `# FIXME: "parent %d" 번호가 무슨 의미?`
 - 2016-01-03 `c6cd2669` [L6348](https://github.com/git/git/blob/master/po/ko.po#L6348) `# FIXME: give twice?`
 - 2016-01-03 `c6cd2669` [L7042](https://github.com/git/git/blob/master/po/ko.po#L7042) `# FIXME: 의미 불명`
 - 2016-08-21 `ec584cd6` [L17005](https://github.com/git/git/blob/master/po/ko.po#L17005) `"진행 중인 대화형 리베이스의 TODO 파일을 편집하는 중입니다.\n"`
@@ -844,7 +839,7 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `refs/files-backend.c` (1)
 
-- 2024-05-07 `644daf77` [L3161](https://github.com/git/git/blob/master/refs/files-backend.c#L3161) `* TODO: currently we skip creating reflogs for dangling`
+- 2024-05-07 `644daf77` [L3164](https://github.com/git/git/blob/master/refs/files-backend.c#L3164) `* TODO: currently we skip creating reflogs for dangling`
 
 `refs/reftable-backend.c` (4)
 
@@ -940,16 +935,16 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 - 2022-01-11 `e015d4d9` [L831](https://github.com/git/git/blob/master/t/t1092-sparse-checkout-compatibility.sh#L831) `# NEEDSWORK: '--remove', unlike the rest of 'update-index', does not i`
 - 2021-09-24 `105e8b01` [L1106](https://github.com/git/git/blob/master/t/t1092-sparse-checkout-compatibility.sh#L1106) `# NEEDSWORK: Even though the merge conflict removed the`
 - 2021-09-24 `105e8b01` [L1117](https://github.com/git/git/blob/master/t/t1092-sparse-checkout-compatibility.sh#L1117) `# NEEDSWORK: This mode now fails, because folder2/z is`
-- 2021-07-14 `e5ca2910` [L1864](https://github.com/git/git/blob/master/t/t1092-sparse-checkout-compatibility.sh#L1864) `# NEEDSWORK: a sparse-checkout behaves differently from a full checkou`
-- 2021-07-20 `70569fad` [L1899](https://github.com/git/git/blob/master/t/t1092-sparse-checkout-compatibility.sh#L1899) `# NEEDSWORK: 'git checkout' behaves incorrectly in the case of`
-- 2021-07-20 `70569fad` [L1952](https://github.com/git/git/blob/master/t/t1092-sparse-checkout-compatibility.sh#L1952) `# NEEDSWORK: 'git checkout' behaves incorrectly in the case of`
-- 2022-09-23 `7cae7627` [L2148](https://github.com/git/git/blob/master/t/t1092-sparse-checkout-compatibility.sh#L2148) `# NEEDSWORK: when running 'grep' in the superproject with --recurse-su`
-- 2022-09-23 `7cae7627` [L2163](https://github.com/git/git/blob/master/t/t1092-sparse-checkout-compatibility.sh#L2163) `# NEEDSWORK: this test is not actually testing the code. The design pu`
-- 2023-08-11 `4723ae10` [L2380](https://github.com/git/git/blob/master/t/t1092-sparse-checkout-compatibility.sh#L2380) `# NEEDSWORK: The 'diff --check' test is left as 'test_expect_failure' `
+- 2021-07-14 `e5ca2910` [L1919](https://github.com/git/git/blob/master/t/t1092-sparse-checkout-compatibility.sh#L1919) `# NEEDSWORK: a sparse-checkout behaves differently from a full checkou`
+- 2021-07-20 `70569fad` [L1954](https://github.com/git/git/blob/master/t/t1092-sparse-checkout-compatibility.sh#L1954) `# NEEDSWORK: 'git checkout' behaves incorrectly in the case of`
+- 2021-07-20 `70569fad` [L2007](https://github.com/git/git/blob/master/t/t1092-sparse-checkout-compatibility.sh#L2007) `# NEEDSWORK: 'git checkout' behaves incorrectly in the case of`
+- 2022-09-22 `7cae7627` [L2210](https://github.com/git/git/blob/master/t/t1092-sparse-checkout-compatibility.sh#L2210) `# NEEDSWORK: when running 'grep' in the superproject with --recurse-su`
+- 2022-09-22 `7cae7627` [L2225](https://github.com/git/git/blob/master/t/t1092-sparse-checkout-compatibility.sh#L2225) `# NEEDSWORK: this test is not actually testing the code. The design pu`
+- 2023-08-11 `4723ae10` [L2442](https://github.com/git/git/blob/master/t/t1092-sparse-checkout-compatibility.sh#L2442) `# NEEDSWORK: The 'diff --check' test is left as 'test_expect_failure' `
 
 `t/t1700-split-index.sh` (1)
 
-- 2018-11-20 `d8465500` [L48](https://github.com/git/git/blob/master/t/t1700-split-index.sh#L48) `# NEEDSWORK: Stop hard-coding checksums.`
+- 2018-11-19 `d8465500` [L48](https://github.com/git/git/blob/master/t/t1700-split-index.sh#L48) `# NEEDSWORK: Stop hard-coding checksums.`
 
 `t/t1800-hook.sh` (1)
 
@@ -992,7 +987,7 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `t/t5550-http-fetch-dumb.sh` (1)
 
-- 2020-04-19 `e7fab62b` [L442](https://github.com/git/git/blob/master/t/t5550-http-fetch-dumb.sh#L442) `# NEEDSWORK: Writing commands to git-remote-curl can race against the `
+- 2020-04-18 `e7fab62b` [L442](https://github.com/git/git/blob/master/t/t5550-http-fetch-dumb.sh#L442) `# NEEDSWORK: Writing commands to git-remote-curl can race against the `
 
 `t/t5551-http-fetch-smart.sh` (1)
 
@@ -1000,7 +995,7 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `t/t5552-skipping-fetch-negotiator.sh` (1)
 
-- 2019-12-27 `d6509da6` [L194](https://github.com/git/git/blob/master/t/t5552-skipping-fetch-negotiator.sh#L194) `# NEEDSWORK: The number of "have"s sent depends on whether the transpo`
+- 2019-12-26 `d6509da6` [L194](https://github.com/git/git/blob/master/t/t5552-skipping-fetch-negotiator.sh#L194) `# NEEDSWORK: The number of "have"s sent depends on whether the transpo`
 
 `t/t5616-partial-clone.sh` (1)
 
@@ -1037,9 +1032,9 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `t/t7406-submodule-update.sh` (3)
 
-- 2018-08-08 `65799fbc` [L973](https://github.com/git/git/blob/master/t/t7406-submodule-update.sh#L973) `sed "s/$H/XXX/" out >expect &&`
-- 2018-08-08 `65799fbc` [L983](https://github.com/git/git/blob/master/t/t7406-submodule-update.sh#L983) `sed "s/$H2/XXX/" out >actual &&`
-- 2022-07-01 `8fc36c39` [L1133](https://github.com/git/git/blob/master/t/t7406-submodule-update.sh#L1133) `# NEEDSWORK: Clean up the tests so that we can reuse the test setup.`
+- 2018-08-08 `65799fbc` [L992](https://github.com/git/git/blob/master/t/t7406-submodule-update.sh#L992) `sed "s/$H/XXX/" out >expect &&`
+- 2018-08-08 `65799fbc` [L1002](https://github.com/git/git/blob/master/t/t7406-submodule-update.sh#L1002) `sed "s/$H2/XXX/" out >actual &&`
+- 2022-06-30 `8fc36c39` [L1152](https://github.com/git/git/blob/master/t/t7406-submodule-update.sh#L1152) `# NEEDSWORK: Clean up the tests so that we can reuse the test setup.`
 
 `t/t7501-commit-basic-functionality.sh` (1)
 
@@ -1070,12 +1065,12 @@ This file is generated. Run `make` to rebuild it; do not edit it by hand.
 
 `t/t9402-git-cvsserver-refs.sh` (2)
 
-- 2012-10-14 `aa7aab3b` [L510](https://github.com/git/git/blob/master/t/t9402-git-cvsserver-refs.sh#L510) `# TODO: Validate that the .# file was saved properly, and then`
-- 2012-10-14 `aa7aab3b` [L532](https://github.com/git/git/blob/master/t/t9402-git-cvsserver-refs.sh#L532) `# TODO: test cvs status`
+- 2012-10-13 `aa7aab3b` [L510](https://github.com/git/git/blob/master/t/t9402-git-cvsserver-refs.sh#L510) `# TODO: Validate that the .# file was saved properly, and then`
+- 2012-10-13 `aa7aab3b` [L532](https://github.com/git/git/blob/master/t/t9402-git-cvsserver-refs.sh#L532) `# TODO: test cvs status`
 
 `t/t9806-git-p4-options.sh` (1)
 
-- 2011-12-25 `09fca77b` [L212](https://github.com/git/git/blob/master/t/t9806-git-p4-options.sh#L212) `# XXX: should clone/sync just use the client spec exactly, rather`
+- 2011-12-24 `09fca77b` [L212](https://github.com/git/git/blob/master/t/t9806-git-p4-options.sh#L212) `# XXX: should clone/sync just use the client spec exactly, rather`
 
 `t/t9902-completion.sh` (4)
 

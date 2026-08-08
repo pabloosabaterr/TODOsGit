@@ -1,5 +1,1 @@
-markers.csv
-markers.prev.csv
-markers.meta.json
-__pycache__/
-node_modules/
+.DS_Store

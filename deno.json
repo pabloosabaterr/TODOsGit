@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "strict": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
     "noImplicitReturns": true,
@@ -7,10 +8,11 @@
     "exactOptionalPropertyTypes": true,
     "verbatimModuleSyntax": true
   },
- "fmt": {
+  "fmt": {
     "semiColons": true,
     "lineWidth": 100,
-    "indentWidth": 2
+    "indentWidth": 2,
+    "exclude": ["WhatToGit.md"]
   },
   "lint": {
     "rules": {
@@ -21,8 +23,8 @@
         "explicit-module-boundary-types"
       ]
     }
-  }
-  "tasks": {
-    "dev": "deno run --allow-read src/main.ts"
   },
+  "tasks": {
+    "dev": "deno run --allow-run=git --allow-env=HOME --allow-write=WhatToGit.md src/main.ts"
+  }
 }

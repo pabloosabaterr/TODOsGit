@@ -1,34 +1,57 @@
-# markers
+# WhatToGit
 
-Finds `NEEDSWORK`, `TODO`, `FIXME` and `XXX` markers in a git repository and
-writes a Markdown report, with the date each line was last touched and a link
-to it on GitHub.
+Contributing to Git seems hard to start. The codebase is huge and there's no
+obvious place to begin and as I like to say:
 
-Needs Python 3.8+ and `git`. No dependencies.
+`One doesn't know what it lacks until it knows what it has`
 
-## Usage
+This repo aims to shorten that gap for git newcomers.
 
-Point `REPO` at a local clone:
+## What's here now
 
+**[WhatToGit.md](WhatToGit.md)**: every `NEEDSWORK`, `TODO`, `FIXME` and `XXX`
+comment in the Git source tree, grouped by directory, with the author and date of
+the last change to that line and a link straight to it on GitHub.
+
+The idea came out of a discussion about what would actually help new
+contributors: a bug tracker of small, real, named tasks. Git doesn't have one,
+but the codebase is full of notes that its own maintainers left behind, and those
+are a decent substitute. They are small, they are real, and someone already
+thought they were worth doing.
+
+The report is regenerated automatically, so it doesn't go stale.
+
+## Reading the report
+
+A few things worth knowing before you pick something off the list:
+
+- **Dates are the last time the line was touched, not when the marker was
+  added.** A `NEEDSWORK` from 2011 sitting on a line that was reindented in 2024
+  will show 2024.
+- **A marker is not a ticket.** Some are notes-to-self, some are already
+  obsolete, some are hard. Read the surrounding code and the commit that
+  introduced the line before assuming it's a task.
+- **Check the mailing list first.** Search
+  [lore.kernel.org/git](https://lore.kernel.org/git/) for the filename and the
+  topic. Someone may have discussed it years ago, decided against it, or be
+  working on it right now. You don't need to subscribe to search; it's a public
+  archive, and reading it is how you find out whether a thing is worth doing.
+
+## Running it yourself
+
+Start by cloning git, and then:
+
+```sh
+deno run dev <path_to_git>
 ```
-make REPO=/path/to/repo     # writes markers.csv and MARKERS.md
-make clean
-```
 
-Or run the two steps directly:
+A shallow clone will not work. `git blame` needs history; without it every line
+is attributed to the most recent commit and all the dates come out wrong.
 
-```
-REPO=/path/to/repo python3 markers.py scan     # git grep + git blame -> markers.csv (slow)
-REPO=/path/to/repo python3 markers.py report   # markers.csv -> MARKERS.md
-```
+## Roadmap
 
-`report` only reads the CSV, so you can rerun it freely to tweak the output.
+Rough, in no particular order, and open to change:
 
-`REPO` is the only knob. Everything else lives in the constants at the top of
-`markers.py`, including the GitHub URL the report links against set it to
-match the repository you scan. Links point at the tip of a branch rather than
-the scanned commit, since your local HEAD may not exist on the remote.
-
----
-
-*Built with the help of AI.*
+- **Small tutorials**, in the spirit of `Documentation/MyFirstContribution.txt`
+- **A GSoC/Outreachy guide**: writing a proposal, what a draft cycle looks like,
+  what reviewers are actually reading for.
